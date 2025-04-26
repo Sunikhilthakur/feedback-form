@@ -1,0 +1,132 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.light {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  body.dark {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  .app {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .theme-toggle {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .feedback-form {
+    background-color: inherit;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+  }
+  
+  body.dark .feedback-form input,
+  body.dark .feedback-form textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+  }
+  
+  .feedback-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirmation {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .feedback-item {
+    background-color: inherit;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .feedback-item h3 {
+    margin: 0 0 10px;
+  }
+  
+  .feedback-item small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: gray;
+  }
+  
+  .feedback-item button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .main-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
